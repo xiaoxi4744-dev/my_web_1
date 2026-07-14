@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGING</title>
+    <link rel="stylesheet" href="SAO.css">
+</head>
+<body>
+    
+    <div class="login_box">
+        <div class="login_header">
+            <h2>Login_::</h2>
+        </div>
+    <form>
+            <div class="login_body">
+                <label for="username">:account</label><br>
+                <input type="text" id="username">
+                <label for="password">:password</label><br>
+                <input type="password" id="password">
+                <button type="button" id="LoginBtn">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Alert Modal -->
+    <div id="Alert" class="alert-overlay">
+        <div class="alert">
+            <div class="alert-header">Alert</div>
+            <div class="alert-body">
+                <p id="alertText" style="color: rgb(105, 103, 103);"></p>
+            </div>
+            <div class="alert-footer">
+                <button class="ok" id="confirmBtn"><img src="/Users/xiaoxi/Downloads/Mywebforport/img/Yes.png" alt="Confirm"></button>
+                <button class="cancel" id="cancelBtn"><img src="/Users/xiaoxi/Downloads/Mywebforport/img/No.png" alt="Cancel"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sound -->
+    <audio id="clickSound" src="/Users/xiaoxi/Downloads/Mywebforport/sfx/click.mp3"> </audio>
+
+    <!-- JavaScript -->
+    <script src="/Users/xiaoxi/Downloads/Mywebforport/ja.js"></script>
+
+</body>
+</html>
