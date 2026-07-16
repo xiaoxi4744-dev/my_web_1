@@ -202,20 +202,104 @@ body{
     z-index:1;
 }
 
+.myname{
+    position: absolute;
+
+    top:20px;
+    left:0;
+
+    width:100%;
+    text-align:center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color:rgb(255, 255, 255);
+    font-size:28px;
+    font-weight:bold;
+}
+
+.line{
+
+    position: fixed;
+    top:10%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:80%;
+    height:2px;
+    background:rgb(148, 146, 146);
+}
+
 /* popup */
 .popup_mysatus{
-    position:fixed;
+    position: fixed;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
 
-    width:500px;
-    height:300px;
+    width:350px;
+    height:600px;
+    background: linear-gradient(
+        to top,
+        #ffffff,
+        rgb(255, 255, 255)
+    );
 
-    background:white;
-    border:3px solid #00cfff;
+    
+     
 
     display:none;
 
+    clip-path: inset(50% 0 50% 0);
+    opacity:0;
+    transition:
+        clip-path .25s ease,
+        opacity .25s ease;
     z-index:1000;
+}
+
+.popup_mysatus.show{
+    clip-path: inset(0);
+    opacity:1;
+}
+#my_img img{
+    width: 150px;
+    height: 200px;
+    transform:translate(70%,40%);
+    border:3px solid #9ea1a1
+}
+
+/**/
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-9px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes popup{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
 }

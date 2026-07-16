@@ -39,7 +39,7 @@ confirmBtn.addEventListener("click", () => {
         if (username.value === "admin" && password.value === "1234") {
             closeAlert();
         setTimeout(() => {
-                window.location.href = "/Users/xiaoxi/Downloads/Mywebforport/2_myport.html";
+                window.location.href = "Mywebforport/2_myport.html";
             }, 1000);
         } else {
             alertText.textContent = "Username or Password is incorrect!";

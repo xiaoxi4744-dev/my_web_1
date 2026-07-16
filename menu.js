@@ -4,10 +4,6 @@ const sound2 = document.getElementById("clickSound_2");
 const toggle = document.getElementById("toggle");
 const menu = document.getElementById("menu");
 
-const alertOverlay = document.getElementById("Alert");
-const alertBox = document.querySelector(".alert");
-const alertText = document.getElementById("alertText");
-
 // เสียงทุกปุ่ม
 document.querySelectorAll("#toggle").forEach(btn=>{
     btn.addEventListener("click",()=>{
@@ -128,11 +124,69 @@ updateHP();
 
 //popup
 const popup = document.getElementById("popup_mysatus");
+const popup1 = document.getElementById("popup_data");
+const btndata = document.getElementById("btnData");
 
 toggle.addEventListener("click", () => {
+        closePopup1();
     if (popup.style.display === "block") {
-        popup.style.display = "none";
+        closePopup();
     } else {
-        popup.style.display = "block";
+        openPopup();
     }
 });
+//popup1
+btndata.addEventListener("click", () => {
+    if (popup1.style.display === "block") {
+        closePopup1();
+    } else {
+        openPopup1();
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//function
+//open
+//btn1
+function openPopup() {
+    popup.style.display = "block";
+    requestAnimationFrame(() => {
+        popup.classList.add("show");
+    });
+}
+
+function closePopup() {
+    popup.classList.remove("show");
+
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 250);
+}
+
+//btn2
+function openPopup1(){
+    popup1.style.display = "block";
+    requestAnimationFrame(()=>{
+        popup1.classList.add("show");
+    });
+}
+function closePopup1(){
+    popup1.classList.remove("show");
+
+    setTimeout(()=>{
+        popup1.style.display = "none"
+    },250);
+}
